@@ -37,10 +37,12 @@ Zillow: if `--mode download` fails, use inbox and download from [Zillow Research
 - **Sanity check:** `notebooks/00_Data_Collection_Sanity_Check.ipynb` — load newest raw files and print shapes.
 - **Load in code:** `from src.acquire._loaders import load_all_newest` then `load_all_newest()`.
 
-Metadata: `data/metadata/sources.md`, `data/metadata/ingest_log.json`.
+**Pipeline outputs** (local only; not in repo): `02_Data_Preprocessing` writes `data/processed/model_data.parquet` and `model_data.csv`; `03_FeatureEngineer` writes `data/processed/model_data_fe.parquet` and `model_data_fe.csv`.
+
+**In the repo:** Only `data/metadata/` (sources.md, ingest_log.json) is versioned. `data/raw/` and `data/processed/` are gitignored; re-run the acquirers and notebooks to reproduce the data.
 
 ## Notebooks and docs
 
 - **Report.ipynb** — Full project report (export to PDF).
 - **notebooks/** — `00_Data_Collection_Sanity_Check`, `01_EDA_Analysis`, `02_Data_Preprocessing`, `03_FeatureEngineer`.
-- **docs/** — Data preprocessing report (PDF), feature engineering rationale, cleaning/merging guide, combined documentation.
+- **docs/** — Preprocessing report (PDF), feature engineering rationale, cleaning/merging guide.
