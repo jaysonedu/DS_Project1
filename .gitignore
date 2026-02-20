@@ -40,8 +40,8 @@ ENV/
 .ipynb_checkpoints/
 
 # Data (large, re-downloadable)
-/data/processed/
-/data/raw/
+/data/processed/*
+/data/raw/*
 
 # OS
 .DS_Store
