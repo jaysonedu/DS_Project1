@@ -1,6 +1,10 @@
 # NYC Housing + Neighborhood Factors
 
-Data acquisition layer plus downstream notebooks for cleaning, EDA, and feature engineering.
+DS Project 1: data acquisition, cleaning, EDA, feature engineering, and modeling for NYC housing and neighborhood factors.
+
+## Project report
+
+**Report.ipynb** (project root) is the structured report. It includes introduction and dataset description, data acquisition methodology, cleaning and preprocessing, EDA, feature engineering justification, key findings, challenges and recommendations, GitHub link, and team contributions. Export to PDF for submission: *File → Save and Export Notebook As… → PDF*, or `jupyter nbconvert --to pdf Report.ipynb`.
 
 ## Setup
 
@@ -30,11 +34,13 @@ Zillow: if `--mode download` fails, use inbox and download from [Zillow Research
 
 ## Verify and use the data
 
-- **Sanity check:** Open `notebooks/00_Data_Collection_Sanity_Check.ipynb` and run to load newest raw files and print shapes.
+- **Sanity check:** `notebooks/00_Data_Collection_Sanity_Check.ipynb` — load newest raw files and print shapes.
 - **Load in code:** `from src.acquire._loaders import load_all_newest` then `load_all_newest()`.
 
 Metadata: `data/metadata/sources.md`, `data/metadata/ingest_log.json`.
 
-## Next steps
+## Notebooks and docs
 
-Cleaning and merging: see [docs/CLEANING_AND_MERGING.md](docs/CLEANING_AND_MERGING.md). Notebooks: `01_EDA_Analysis`, `02_Data_Preprocessing`, `03_FeatureEngineer`.
+- **Report.ipynb** — Full project report (export to PDF).
+- **notebooks/** — `00_Data_Collection_Sanity_Check`, `01_EDA_Analysis`, `02_Data_Preprocessing`, `03_FeatureEngineer`.
+- **docs/** — Data preprocessing report (PDF), feature engineering rationale, cleaning/merging guide, combined documentation.
